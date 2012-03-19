@@ -8,8 +8,8 @@
 
 (aset conn "onopen" #(. conn send (str "Bot" (rand-int 100))))
 
-(aset conn "onerror" (fn [err] (. js/console log (str "WebSocket Error: " err))))
+(aset conn "onerror" (fn [err] (. js/console log (str "Error: " err))))
 
-(aset conn "onmessage" (fn [msg] (. js/console log (str "Server: " (aget msg "data")))))
+(aset conn "onmessage" (fn [msg] (. js/console log (str (.data msg)))))
 
 (repl/connect "http://localhost:9000/repl")

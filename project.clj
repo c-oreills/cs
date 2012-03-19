@@ -9,5 +9,6 @@
   ;:cljs-libs ["js/foobar.js"]
   :cljs-test-cmd ["phantomjs" "test.js"]
   :dependencies [[org.clojure/clojure "1.3.0"]
-                 [aleph "0.2.1-clj13-SNAPSHOT"]]
+                 [aleph "0.2.1-clj13-SNAPSHOT"]
+                 [clj-json "0.5.0"]]
   :main csgame.serv)
